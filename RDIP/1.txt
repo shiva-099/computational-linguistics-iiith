@@ -1,0 +1,18 @@
+Observed Funtionality:
+1.There are 6 Options to Navigate through the pages
+2.When we click on introduction it will navigate us to the introduction page
+3.When we click on theory it will navigate us to the theory page
+4.When we click on objective it will navigate us to the objective page
+5.When we click on experiment it will navigate us to the experiment page
+6..When we click on quiz it will navigate us to the quiz page
+7.When we click on procedure it will navigate us to the procedure page
+8.when we click on the experiment a drop down will appear which shows us to select languages
+9.when a particular language is select a group of jumbled words will appear on the screen 
+we have to arrange the words in the correct order
+10.if the sentence is made in the correct order it will show correct Answer!!
+11.if the sentence is made in the wrong order it will show wrong Answer!!
+12.show the sentence button will appear to see the correct answer
+
+Expected Functionality:
+1.if the select button is appeared in disabled textbox!
+2.alert would be good to show correct or wrong answer!!
