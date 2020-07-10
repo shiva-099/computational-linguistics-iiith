@@ -1,3 +1,4 @@
+// DropDown function
 function select() {
   var x=document.getElementById('select').value;
   if(x=="English"||x=="Hindi")
@@ -100,7 +101,7 @@ function select() {
 
         }
 
-  
+
 else{
   document.getElementById("Long").innerHTML="";
   document.getElementById("subline").innerHTML="";
