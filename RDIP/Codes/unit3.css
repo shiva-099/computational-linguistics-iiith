@@ -8,7 +8,9 @@ body{
     overflow: hidden;
 }
 
-
+#buttons{
+  margin :5px;
+}
  select{
      margin:5% 40%;
      padding: 0.3%;
@@ -21,3 +23,7 @@ body{
     text-align: center;
  }
 /* DropDown */
+#sen{
+    text-align: center;
+
+}
