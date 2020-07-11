@@ -64,20 +64,19 @@ function ran()
       var arr  =all_eng[Math.floor(Math.random() * all_eng.length)];
       var arra =arr[Math.floor(Math.random() * arr.length)];
       var bb=arra.split(" ");
-      var j=0;
-      var length2=0;
-      length2 = bb.length;
-      document.getElementById("sen").innerHTML=" "
-      for(j=0;j<length2;j++)
-      {
-
-          document.getElementById("sen").innerHTML += "<button id='buttons'>"+bb[j]+"</button>";
-
-      }
+      for(i=0;i<bb.length;i++)
+        {
+        j = Math.floor(Math.random()*bb.length)
+        arra = bb[i];
+        bb[i] = bb[j]
+        bb[j] = arra;
+     }
+  document.getElementById("sen").innerHTML=" "
+     for(i=0;i<bb.length;i++)
+       {
+         document.getElementById("sen").innerHTML += "<button id='buttons'>"+bb[i]+"</button>";
+    }
 }
-
-
-
          if(x=="Hindi")
         {
             var h1 = ['राम‌ ‌और‌ ‌श्याम‌ ‌बाजार‌ ‌गयें‌',
@@ -128,20 +127,20 @@ function ran()
                         'है‌ ‌वहाँ‌ ‌बड़ी‌ ‌सी‌ ‌एक‌ ‌किताब‌'];
           var all_hin=[h1,h2,h3,h4,h5,h6,h7];
           var arr  =all_hin[Math.floor(Math.random() * all_hin.length)];
-          var arra =arr[Math.floor(Math.random() * arr.length)];
-          var bb=arra.split(" ");
-          var j=0;
-          var length2=0;
-          length2 = bb.length;
-          document.getElementById("sen").innerHTML=" "
-          for(j=0;j<length2;j++)
-          {
-
-              document.getElementById("sen").innerHTML += "<button id='buttons'>"+bb[j]+"</button>";
-
-          }
-
-
+          var array =arr[Math.floor(Math.random() * arr.length)];
+          var b2=array.split(" ");
+          for(i=0;i<b2.length;i++)
+            {
+            j = Math.floor(Math.random()*b2.length)
+            array = b2[i];
+            b2[i] = b2[j]
+            b2[j] = array;
+         }
+        document.getElementById("sen").innerHTML=" "
+         for(i=0;i<b2.length;i++)
+           {
+             document.getElementById("sen").innerHTML += "<button id='buttons'>"+b2[i]+"</button>";
         }
 
       }
+    }
