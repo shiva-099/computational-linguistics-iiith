@@ -1,5 +1,7 @@
 // DropDown function
 var reforms;
+var length=0;
+var count=0;
 function select() {
   var x=document.getElementById('select').value;
   if(x=="English"||x=="Hindi")
@@ -73,12 +75,15 @@ function ran()
         bb[j] = arra;
      }
   document.getElementById("sen").innerHTML=" "
+  count=0;
+  length=bb.length;
      for(i=0;i<bb.length;i++)
        {
           document.getElementById("sen").innerHTML += "<button class='buttons' id='buttons" +i+"' value='"+bb[i]+"' onclick='Display(this.id,this.value);'>"+bb[i]+"</button>";
           document.getElementById("msg").innerHTML="";
           document.getElementById("selected").innerHTML ="";
           document.getElementById("reform").innerHTML = "";
+           document.getElementById("checkcorrectness").innerHTML="";
     }
     reforms=document.getElementById("sen").innerHTML ;
 }
@@ -142,6 +147,8 @@ function ran()
             b2[j] = array;
          }
         document.getElementById("sen").innerHTML=" "
+        count=0;
+        length=b2.length;
          for(i=0;i<b2.length;i++)
            {
              document.getElementById("sen").innerHTML += "<button class='buttons' id='buttons" +i+"' value='"+b2[i]+"' onclick='Display(this.id,this.value);'>"+b2[i]+"</button>";
@@ -149,6 +156,7 @@ function ran()
              document.getElementById("msg").innerHTML="";
              document.getElementById("selected").innerHTML ="";
              document.getElementById("reform").innerHTML = "";
+             document.getElementById("checkcorrectness").innerHTML="";
         }
         reforms=document.getElementById("sen").innerHTML ;
       }
@@ -160,7 +168,16 @@ function ran()
             document.getElementById("selected").innerHTML +=" "+bvalue;
             document.getElementById(bid).style.display="none";
             document.getElementById("reform").innerHTML = "<button class='reform' id='reform' onclick='reform()'> Re-form the sentence</button>";
+          count++;
+            if(length==count && length>0)
+            {
+                document.getElementById("checkcorrectness").innerHTML="<button id='check'>Check Correctness of the Sentence</button>";
+                selectedSentence = document.getElementById("selected").innerHTML;
 
+            }
+            else{
+                document.getElementById("checkcorrectness").innerHTML="";
+            }
 
         }
         function reform()
@@ -170,6 +187,7 @@ function ran()
             document.getElementById("msg").innerHTML="";
             document.getElementById("selected").innerHTML ="";
             document.getElementById("reform").innerHTML = "";
+            document.getElementById("checkcorrectness").innerHTML="";
 
 
         }
