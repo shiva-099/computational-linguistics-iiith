@@ -11,6 +11,9 @@ body{
 #buttons{
   margin :5px;
 }
+.buttons{
+  margin :5px;
+}
  select{
      margin:5% 40%;
      padding: 0.3%;
@@ -23,9 +26,20 @@ body{
     text-align: center;
  }
 /* DropDown */
-#sen{
+#sen,#reform{
     text-align: center;
 
+}
+#msg{
+  text-align: center;
+  color: blue;
+  font-weight: bold;
+}
+#selected{
+  text-align: center;
+  color: grey;
+  font-weight: bolder;
+  font-size: 40px;
 }
 #hin_sen{
     text-align: center;

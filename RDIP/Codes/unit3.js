@@ -1,4 +1,5 @@
 // DropDown function
+var reforms;
 function select() {
   var x=document.getElementById('select').value;
   if(x=="English"||x=="Hindi")
@@ -74,8 +75,12 @@ function ran()
   document.getElementById("sen").innerHTML=" "
      for(i=0;i<bb.length;i++)
        {
-         document.getElementById("sen").innerHTML += "<button id='buttons'>"+bb[i]+"</button>";
+          document.getElementById("sen").innerHTML += "<button class='buttons' id='buttons" +i+"' value='"+bb[i]+"' onclick='Display(this.id,this.value);'>"+bb[i]+"</button>";
+          document.getElementById("msg").innerHTML="";
+          document.getElementById("selected").innerHTML ="";
+          document.getElementById("reform").innerHTML = "";
     }
+    reforms=document.getElementById("sen").innerHTML ;
 }
          if(x=="Hindi")
         {
@@ -139,8 +144,32 @@ function ran()
         document.getElementById("sen").innerHTML=" "
          for(i=0;i<b2.length;i++)
            {
-             document.getElementById("sen").innerHTML += "<button id='buttons'>"+b2[i]+"</button>";
+             document.getElementById("sen").innerHTML += "<button class='buttons' id='buttons" +i+"' value='"+b2[i]+"' onclick='Display(this.id,this.value);'>"+b2[i]+"</button>";
+             // document.getElementById("sen").innerHTML += "<button id='buttons'>"+b2[i]+"</button>";
+             document.getElementById("msg").innerHTML="";
+             document.getElementById("selected").innerHTML ="";
+             document.getElementById("reform").innerHTML = "";
         }
-
+        reforms=document.getElementById("sen").innerHTML ;
       }
     }
+    function Display(bid,bvalue)
+        {
+
+            document.getElementById("msg").innerHTML="Formed Sentence <span>(after selecting words):</span>";
+            document.getElementById("selected").innerHTML +=" "+bvalue;
+            document.getElementById(bid).style.display="none";
+            document.getElementById("reform").innerHTML = "<button class='reform' id='reform' onclick='reform()'> Re-form the sentence</button>";
+
+
+        }
+        function reform()
+        {
+
+            document.getElementById("sen").innerHTML = reforms;
+            document.getElementById("msg").innerHTML="";
+            document.getElementById("selected").innerHTML ="";
+            document.getElementById("reform").innerHTML = "";
+
+
+        }
