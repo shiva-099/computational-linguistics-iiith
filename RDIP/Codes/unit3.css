@@ -45,3 +45,16 @@ body{
     text-align: center;
 
 }
+#correct{
+  text-align: center;
+  font-weight: bolder;
+  color: green;
+}
+#wrong{
+  text-align: center;
+  font-weight: bolder;
+  color: red;
+}
+#showAnswer{
+  text-align: center;
+}
