@@ -226,6 +226,28 @@ function ran()
                 document.getElementById("hide").innerHTML="Hide the Correct Sentences";
             }
         }
+        function chk()
+        {
+          var i=0;
+          document.getElementById("showAnswer").innerHTML="<button id='hide' onclick='show()'>Hide the Correct Sentences</button>";
+          anslist = "";
+          if(x=="English")
+          {
+            for(i=0;i<arr.length;i++)
+            {
+                document.getElementById("showAnswer").innerHTML+="<p>"+arr[i]+"</p><br>";
+                anslist+="<p>"+arr[i]+"</p><br>";
+            }
+          }
+          if(x=="Hindi")
+          {
+            for(i=0;i<arrs.length;i++)
+            {
+                document.getElementById("showAnswer").innerHTML+="<p>"+arrs[i]+"</p><br>";
+                anslist+="<p>"+arrs[i]+"</p><br>";
+            }
+          }
+        }
         function check()
         {
             var ans= selectedSentence.trim();
@@ -259,27 +281,5 @@ function ran()
                   document.getElementById("showAnswer").innerHTML="<button id='crt' onclick='chk(this.id)'>Get Correct Answer</button>"
               }
 
-            }
-          }
-          function chk()
-          {
-            var i=0;
-            document.getElementById("showAnswer").innerHTML="<button id='hide' onclick='show()'>Hide the Correct Sentences</button>";
-            anslist = "";
-            if(x=="English")
-            {
-              for(i=0;i<arr.length;i++)
-              {
-                  document.getElementById("showAnswer").innerHTML+="<p>"+arr[i]+"</p><br>";
-                  anslist+="<p>"+arr[i]+"</p><br>";
-              }
-            }
-            if(x=="Hindi")
-            {
-              for(i=0;i<arrs.length;i++)
-              {
-                  document.getElementById("showAnswer").innerHTML+="<p>"+arrs[i]+"</p><br>";
-                  anslist+="<p>"+arrs[i]+"</p><br>";
-              }
             }
           }
