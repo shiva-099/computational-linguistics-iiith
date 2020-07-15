@@ -212,6 +212,20 @@ function ran()
 
 
         }
+        function show()
+        {
+            if(document.getElementById("hide").innerHTML=='Hide the Correct Sentences')
+            {
+                document.getElementById("showAnswer").innerHTML="";
+                document.getElementById("showAnswer").innerHTML="<button id='hide' onclick='show()'>Get Answers</button>";
+               // document.getElementById("hide").innerHTML="Get Answers"
+            }
+            else
+            {
+                document.getElementById("showAnswer").innerHTML+=anslist;
+                document.getElementById("hide").innerHTML="Hide the Correct Sentences";
+            }
+        }
         function check()
         {
             var ans= selectedSentence.trim();
@@ -250,7 +264,7 @@ function ran()
           function chk()
           {
             var i=0;
-            document.getElementById("showAnswer").innerHTML="<button id='hide' onclick='toggle()'>Hide the Correct Sentences</button>";
+            document.getElementById("showAnswer").innerHTML="<button id='hide' onclick='show()'>Hide the Correct Sentences</button>";
             anslist = "";
             if(x=="English")
             {
@@ -268,18 +282,4 @@ function ran()
                   anslist+="<p>"+arrs[i]+"</p><br>";
               }
             }
-          }
-          function toggle()
-          {
-              if(document.getElementById("hide").innerHTML=='Hide the Correct Sentences')
-              {
-                  document.getElementById("showAnswer").innerHTML="";
-                  document.getElementById("showAnswer").innerHTML="<button id='hide' onclick='toggle()'>Get Answers</button>";
-                 // document.getElementById("hide").innerHTML="Get Answers"
-              }
-              else
-              {
-                  document.getElementById("showAnswer").innerHTML+=anslist;
-                  document.getElementById("hide").innerHTML="Hide the Correct Sentences";
-              }
           }
